@@ -1,0 +1,422 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+@font-face {
+  font-family: "Regular";
+  src: url("../public/fonts/Brinnan Regular.otf");
+}
+@font-face {
+  font-family: "Thin";
+  src: url("../public/fonts/Brinnan Thin.otf");
+}
+@font-face {
+  font-family: "ThinOblique";
+  src: url("../public/fonts/Brinnan Thin Oblique.otf");
+}
+@font-face {
+  font-family: "Light";
+  src: url("../public/fonts/Brinnan Light.otf");
+}
+@font-face {
+  font-family: "Oblique";
+  src: url("../public/fonts/Brinnan Oblique.otf");
+}
+@font-face {
+  font-family: "Bold";
+  src: url("../public/fonts/Brinnan Bold.otf");
+}
+@font-face {
+  font-family: "Black";
+  src: url("../public/fonts/Brinnan Black.otf");
+}
+
+.navbutton {
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+}
+.navbutton:hover,.navbutton2:hover,.navbutton22:hover,.navbutton1:hover,.navbutton12:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(45deg, #D6B43D 0%, #DBA93F 5.10%, #E88A45 14.30%, #EB8246 16.40%, #E7774D 21.10%, #DD5860 29.40%, #DB5164 31.00%, #D2466C 46.40%, #C93B73 56.70%, #CB3179 60.70%, #A23394 73.30%, #7F35AB 85.60%, #7D35AB 91.00%, #7537AA 94.00%, #673AA9 96.40%, #533DA8 98.50%, #4041A6 100%);
+
+}
+
+.navbutton2 {
+  padding: 16px 44px;
+  border-radius: 12px;
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+}
+
+.navbutton1 {
+  padding: 16px 44px;
+  border-radius: 12px;
+  background-color: #1b1633 !important;
+  opacity: 0.4;
+}
+.navbutton22 {
+  padding: 9px 44px;
+  border-radius: 12px;
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+}
+
+.navbutton12 {
+  padding: 9px 44px;
+  border-radius: 12px;
+  background-color: #1b1633 !important;
+  opacity: 0.4;
+}
+
+.n1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  border-radius: 8px;
+  background: var(--text-white, #fff);
+  box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.14);
+  padding: 24px 24px 24px 16px;
+}
+.n2 {
+  display: flex;
+  align-items: center;
+}
+.n3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.n4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nextlevel {
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Brinnan;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0.96px;
+}
+.card {
+  /* width: 452px; */
+  border-radius: 30px;
+  opacity: 0.4;
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+}
+
+.card2 {
+  border-radius: 30px;
+  opacity: 0.2;
+  /* width: 452px; */
+  background: #1b1633;
+}
+.ask {
+  border-radius: 32px;
+  opacity: 0.8;
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+}
+
+.followers {
+  border-radius: 24px;
+  background: var(--text-white, #fff);
+  box-shadow: 0px 2px 100px 0px rgba(0, 0, 0, 0.1);
+  gap: 80px;
+  padding: 32px;
+}
+
+.smallone {
+  border-radius: 15px;
+  background: #f6f6f6;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.06);
+}
+
+.bgim {
+  background-image: url("../public/bglogin.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profilecard {
+  border-radius: 24px;
+  background: var(--text-white, #fff);
+  box-shadow: 0px 2px 100px 0px rgba(0, 0, 0, 0.1);
+  padding: 32px;
+  gap: 80px;
+}
+
+.textre {
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Brinnan;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  text-decoration-line: underline;
+}
+
+.reorder {
+  border-radius: 20px;
+  padding: 3px 26px;
+  color: var(--text-white, #fff);
+  font-family: Brinnan;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 187.5% */
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+}
+
+.amounth {
+  background: var(
+    --insta,
+    linear-gradient(
+      45deg,
+      #d6b43d 0%,
+      #dba93f 5.1%,
+      #e88a45 14.3%,
+      #eb8246 16.4%,
+      #e7774d 21.1%,
+      #dd5860 29.4%,
+      #db5164 31%,
+      #d2466c 46.4%,
+      #c93b73 56.7%,
+      #cb3179 60.7%,
+      #a23394 73.3%,
+      #7f35ab 85.6%,
+      #7d35ab 91%,
+      #7537aa 94%,
+      #673aa9 96.4%,
+      #533da8 98.5%,
+      #4041a6 100%
+    )
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Brinnan;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 1291px) {
+  .element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mll {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1220px) {
+  .last {
+    position: static;
+  }
+  .hiddeennn {
+    display: none;
+  }
+  .colvise {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+}
