@@ -7,9 +7,10 @@ const sendMail = require("../utils/sendMail");
 const jwt = require("jsonwebtoken");
 const moment = require("moment");
 const axios = require("axios");
+require("dotenv").config();
 
 const stripe = require("stripe")(
-  "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"
+  process.env.STRIPE_SECRET_KEY
 );
 
 const router = express.Router();
