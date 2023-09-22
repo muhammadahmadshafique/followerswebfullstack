@@ -34,7 +34,7 @@ app.use('/auth', authRoutes);
 app.get('/test', (req, res) => {
   res.json('Hello World!')
 })
-app.get('/ahmad', (req, res) => {
+app.get('/api/ahmad', (req, res) => {
   res.send('Hello, World!');
 });
 
