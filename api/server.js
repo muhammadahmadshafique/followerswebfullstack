@@ -11,10 +11,10 @@ const port = 3001;
 
 app.use(bodyParser.json());
 
-app.use(cors({
-  origin: ['http://localhost:3000'],
-  credentials: true
-}));
+// app.use(cors({
+//   origin: ['http://localhost:3000'],
+//   credentials: true
+// }));
 require("dotenv").config();
 
 
@@ -34,8 +34,12 @@ app.use('/auth', authRoutes);
 app.get('/test', (req, res) => {
   res.json('Hello World!')
 })
+app.get('/ahmad', (req, res) => {
+  res.send('Hello, World!');
+});
+
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port===> ${port}`);
 });
