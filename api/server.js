@@ -28,10 +28,10 @@ mongoose.connect(process.env.MONGODB_URI,{
 app.use(cors())
 
 // Use the auth routes
-app.use('/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 
 //write test api
-app.get('/test', (req, res) => {
+app.get('/api/test', (req, res) => {
   res.json('Hello World!')
 })
 app.get('/api/ahmad', (req, res) => {
