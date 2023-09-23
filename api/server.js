@@ -25,7 +25,18 @@ mongoose.connect(process.env.MONGODB_URI,{
 }).then(()=>console.log("Database has been connected"))
 .catch((error)=>console.log(`Error in database ${error}`))
 
-app.use(cors())
+const allowedOrigins = [
+  'https://followerstudio.fr/',
+  'http://followerstudio.fr/',
+  // Add more origins as needed
+];
+
+const corsOptions = {
+  origin: allowedOrigins,
+  credentials: true, // Include credentials (e.g., cookies) in cross-origin requests
+};
+
+app.use(cors(corsOptions));
 
 // Use the auth routes
 app.use('/api/auth', authRoutes);
@@ -41,5 +52,5 @@ app.get('/api/ahmad', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on port===> ${port}`);
+  console.log(`Server is running on port ok ===> ${port}`);
 });

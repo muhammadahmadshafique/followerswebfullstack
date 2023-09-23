@@ -25,7 +25,7 @@ function Login() {
     }
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_CLIENT_URL}/auth/login`,
+        "https://api.followerstudio.fr/api/auth/login",
         {
           email,
           password,
