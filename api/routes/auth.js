@@ -337,6 +337,9 @@ router.post("/editusername", async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 });
+router.post("/ahmad1", async (req, res) => {
+  res.json('Hello World!')
+});
 
 
 

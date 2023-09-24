@@ -93,6 +93,8 @@ const storage = getStorage();
       toast.success(response.data.message, {
         position: toast.POSITION.TOP_CENTER,
       });
+      localStorage.setItem("userinfo", JSON.stringify(response.data.user));
+
       //reload window
       window.location.reload();
       setLoading(false);
