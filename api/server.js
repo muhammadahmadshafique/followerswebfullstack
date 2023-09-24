@@ -25,19 +25,21 @@ mongoose.connect(process.env.MONGODB_URI,{
 }).then(()=>console.log("Database has been connected"))
 .catch((error)=>console.log(`Error in database ${error}`))
 
-const allowedOrigins = [
-  'https://followerstudio.fr/',
-  'http://followerstudio.fr/',
-  'http://localhost:3000'
-  // Add more origins as needed
-];
+// const allowedOrigins = [
+//   'https://followerstudio.fr/',
+//   'http://followerstudio.fr/',
+//   'http://localhost:3000'
+//   // Add more origins as needed
+// ];
 
-const corsOptions = {
-  origin: allowedOrigins,
-  credentials: true, // Include credentials (e.g., cookies) in cross-origin requests
-};
+// const corsOptions = {
+//   origin: allowedOrigins,
+//   credentials: true, // Include credentials (e.g., cookies) in cross-origin requests
+// };
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: '*'
+}));
 
 // Use the auth routes
 app.use('/api/auth', authRoutes);
@@ -50,6 +52,9 @@ app.get('/api/ahmad', (req, res) => {
   res.send('Hello, World!');
 });
 app.get('/api/ahmad2', (req, res) => {
+  res.send('Hello, World!');
+});
+app.get('/api/ahmad3', (req, res) => {
   res.send('Hello, World!');
 });
 
