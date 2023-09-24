@@ -49,6 +49,9 @@ app.get('/api/test', (req, res) => {
 app.get('/api/ahmad', (req, res) => {
   res.send('Hello, World!');
 });
+app.get('/api/ahmad2', (req, res) => {
+  res.send('Hello, World!');
+});
 
 
 // Start the server
