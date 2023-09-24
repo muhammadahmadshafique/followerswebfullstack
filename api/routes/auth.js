@@ -156,7 +156,7 @@ router.post("/create-checkout-session", async (req, res) => {
       mode: "payment",
 
       success_url: "https://followerstudio.fr/success",
-      cancel_url: "https://followerstudio.fr/cancel",
+      cancel_url: "https://followerstudio.fr/error",
     });
 
     res.json({ message: session.url });
