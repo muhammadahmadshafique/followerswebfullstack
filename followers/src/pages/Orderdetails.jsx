@@ -165,7 +165,7 @@ function Orderdetails() {
                 1000 x 0.05 = $50
               </p> */}
               <p className="text-[#1B1633] text-[36px] fct"> 
-                Total Amount: <span className={`${colorchange? "text-white": "amounth"}`}>${amount}</span>{" "}
+                Total Amount: <span className={`${colorchange? "text-white": "amounth"}`}>€{amount}</span>{" "}
               </p>
             </div>
           </div>

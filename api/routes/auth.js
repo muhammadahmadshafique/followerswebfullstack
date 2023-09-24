@@ -140,7 +140,7 @@ router.post("/create-checkout-session", async (req, res) => {
   console.log("🚀 ~ file: auth.js:140 ~ router.post ~ finalprice:", finalprice);
   const lineItem = {
     price_data: {
-      currency: "usd",
+      currency: "eur",
 
       product_data: {
         name: service,
@@ -155,8 +155,8 @@ router.post("/create-checkout-session", async (req, res) => {
       line_items: [lineItem],
       mode: "payment",
 
-      success_url: "http://localhost:3000/success",
-      cancel_url: "http://localhost:3000/cancel",
+      success_url: "https://followerstudio.fr/success",
+      cancel_url: "https://followerstudio.fr/cancel",
     });
 
     res.json({ message: session.url });
@@ -316,5 +316,30 @@ router.post("/api/createorderinapi", async (req, res) => {
     res.status(500).json({message: error.message}); 
   }
 });
+
+
+router.post("/editusername", async (req, res) => {
+  const { id ,name} = req.body;
+
+  console.log( id, name);
+  
+  try {
+    //change username
+    const user = await User.findByIdAndUpdate(id, {
+      name: name
+    },
+      { new: true }
+    )
+   
+    res.status(200).json({ message: "Username updated successfully",user:user });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: error.message });
+  }
+});
+
+
+
+
 
 module.exports = router;

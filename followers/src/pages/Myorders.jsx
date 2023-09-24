@@ -23,10 +23,10 @@ function Myorders() {
         filter:selected
       });
       //toastify message
-      setOrders(res.data.message);
+      setOrders(res?.data?.message);
     } catch (error) {
       //toastify message
-      toast.error(error.response.data.message, {
+      toast.error(error.response?.data?.message, {
         position: toast.POSITION.TOP_CENTER,
       }
       )
@@ -155,7 +155,7 @@ const reorder =async (item) => {
                       {item.servicetype}
                     </td>
                     <td className="w-[244px] text-center text-[#1B1633] font-fcl text-[12px]">
-                      $ {item.price}
+                    € {item.price}
                     </td>
                     <td className="w-[244px] ">
                       <Link to={`/orderdetails/${item._id}`}>

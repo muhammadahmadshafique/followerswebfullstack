@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
@@ -8,16 +8,24 @@ function Profile() {
     const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
+  const [image, setimage] = useState(null);
+
+  useEffect(() => {
+    const image = localStorage.getItem("image");
+    setimage(image)
+  }, []);
+
   const logout= () => {
     localStorage.removeItem("userinfo");
     navigate("/login");
   }
   return (
     <div className="relative">
+     
       <img
         onClick={() => setOpen(!open)}
-        className="w-[38px] cursor-pointer h-[39px] object-contain"
-        src="/girl.svg"
+        className="w-12 h-12 cursor-pointer rounded-full object-contain"
+        src={image ? image : "/girl.png"}
         alt=""
         srcset=""
       />

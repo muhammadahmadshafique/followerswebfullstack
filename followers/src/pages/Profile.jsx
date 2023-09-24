@@ -23,6 +23,8 @@ import { Link } from "react-router-dom";
 import ProfileCard2 from "../components/ProfileCard2.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Spinner from "../components/Spinner.jsx";
+import axios from "axios";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCt2aeRvKXY_18x9ZbGR9tD6evVKc5ZoEs",
@@ -53,10 +55,14 @@ const storage = getStorage();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [image, setimage] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [id,setid]= useState(null)
+  console.log("🚀 ~ file: Profile.jsx:59 ~ Profile ~ id:", id)
 
 
   useEffect(() => {
     const userinfo = JSON.parse(localStorage.getItem("userinfo"));
+    setid(userinfo._id);
     //get imgae from local storage
     const image = localStorage.getItem("image");
     //get id from local storage
@@ -67,6 +73,37 @@ const storage = getStorage();
 
 
 
+
+
+
+  const changeusername = async (e) => {
+    e.preventDefault();
+  
+    setLoading(true);
+
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_CLIENT_URL}/auth/editusername`,
+        {
+          id,
+          name,
+          
+        }
+      );
+      toast.success(response.data.message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      //reload window
+      window.location.reload();
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      toast.error(error.response.data.message, {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      setLoading(false);
+    }
+  };
 
 
 
@@ -125,7 +162,7 @@ const storage = getStorage();
               <div className="w-12 h-12">
                 <img
                   className="w-full h-full rounded-full object-contain"
-                  src={image ? image : "/girl.svg"}
+                  src={image ? image : "/girl.png"}
                   alt=""
                   srcset=""
                 />
@@ -165,18 +202,27 @@ const storage = getStorage();
               <input
                 type="text"
                 value={name}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
               />
             </div>
-            <div>
-              <p className="text-[#1B1633] py-[12px] fcl text-[18px] tracking-[1px]">
+            <div className="cursor-pointer">
+              <p className="text-[#1B1633] py-[12px] cursor-pointer fcl text-[18px] tracking-[1px]">
                 Email
               </p>
               <input
                 type="email"
                 value={email}
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                onClick={()=>{
+                  //show message that you can not edit email
+                  toast.error("You can not edit email", {
+                    position: toast.POSITION.TOP_CENTER,
+                  });
+                }}
+                class="bg-gray-50 border cursor-pointer border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               />
             </div>
             <div>
@@ -199,11 +245,10 @@ const storage = getStorage();
               Cancel
             </button>
             </Link>
-            <Link to="/myorder">
-              <button className="navbutton22 whitespace-nowrap h-fit text-white font-fcl  text-[18px]">
-                Save Changes
+         
+              <button onClick={(e) => changeusername(e)} className="navbutton22 whitespace-nowrap h-fit text-white font-fcl  text-[18px]">
+              {loading ? <Spinner /> : "Save Changes"}
               </button>
-            </Link>
           </div>
         </div>
       </div>

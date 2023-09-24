@@ -509,7 +509,7 @@ function Buyfollowers2() {
       setLoading(false);
     } catch (error) {
       console.log(error);
-      toast.error(error.response.data.message, {
+      toast.error(error.response?.data?.message, {
         position: toast.POSITION.TOP_CENTER,
       });
       setLoading(false);
@@ -715,7 +715,7 @@ useEffect(() => {
               <p className="text-[#1B1633] tracking-[1px] text-[36px] fct">
                 Total Amount:{" "}
                 <span className="amounth">
-                  ${finalprice?.price}
+                €{finalprice?.price}
                 </span>{" "}
               </p>
             </div>

@@ -94,6 +94,10 @@ html {
   );
 }
 
+button{
+  white-space: nowrap;
+}
+
 .navbutton1 {
   padding: 16px 44px;
   border-radius: 12px;

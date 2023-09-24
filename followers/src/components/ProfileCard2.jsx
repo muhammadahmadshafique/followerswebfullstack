@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function ProfileCard2() {
   const [open, setOpen] = useState(false);
+  const [image, setimage] = useState(null);
+  useEffect(() => {
+    const image = localStorage.getItem("image");
+    setimage(image)
+  }, []);
 
   return (
     <div className="flex gap-y-8 flex-col md:flex-row justify-center md:justify-between items-center pt-[25px]">
@@ -21,8 +26,8 @@ function ProfileCard2() {
         <div className="relative">
           <img
             onClick={() => setOpen(!open)}
-            className="w-[58px] cursor-pointer h-[39px] object-contain"
-            src="/girl.svg"
+            className="w-12 h-12 cursor-pointer rounded-full object-contain"
+            src={image ? image : "/girl.png"}
             alt=""
             srcset=""
           />

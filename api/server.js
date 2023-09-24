@@ -28,6 +28,7 @@ mongoose.connect(process.env.MONGODB_URI,{
 const allowedOrigins = [
   'https://followerstudio.fr/',
   'http://followerstudio.fr/',
+  'http://localhost:3000'
   // Add more origins as needed
 ];
 
