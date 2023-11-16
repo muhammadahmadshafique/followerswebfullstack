@@ -8,8 +8,6 @@ function Buyfollowers() {
 
   const [selected, setSelected] = useState("002-instagram.svg");
 
-
-
   const onclicks = (item) => {
     setSelected(item);
   };
@@ -45,13 +43,12 @@ function Buyfollowers() {
         <ProfileCard1 />
         <div className="mt-[65px] md:mt-[105px]">
           <div className="followers">
-            <Link to="/buy">
-              <p className="text-[#1B1633] tracking-[1px] mb-[32px] text-center font-fcr text-[28px] font-[700]">
-                Buy Followers
-              </p>
-            </Link>
+            <p className="text-[#1B1633] tracking-[1px] mb-[32px] text-center font-fcr text-[28px] font-[700]">
+              Nos plateformes
+            </p>
+
             <p className="text-[#1B1633] tracking-[1px] text-center font-fct opacity-80 text-[18px] font-[500]">
-              Select a service
+            Sélectionnez votre plateforme
             </p>
             <div className="flex flex-wrap gap-y-16 justify-center items-center gap-x-[50px] my-[80px]">
               {[
@@ -79,14 +76,17 @@ function Buyfollowers() {
               ))}
             </div>
             <div className="flex gap-x-3 justify-between items-center">
-              <Link to='/buy'>
-              <button className="navbutton1 text-white font-fcl  md:text-[18px]">
-                Cancel
-              </button>
-              </Link>
-                <button onClick={()=>handleselectedplateform()} className="navbutton2 text-white font-fcl  md:text-[18px]">
-                  Next
+              <Link to="/buy">
+                <button className="navbutton1 text-white font-fcl  md:text-[18px]">
+                Retour
                 </button>
+              </Link>
+              <button
+                onClick={() => handleselectedplateform()}
+                className="navbutton2 text-white font-fcl  md:text-[18px]"
+              >
+                Suivant
+              </button>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ function Buyfollowers() {
             class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
           />
           <p className="text-[#1B1633] text-center pb-[40px] font-fcl text-[14px] font-[300]">
-            All rights reserved @followerstudio.com
+          Tout droit réservé ©Followerstudio
           </p>
         </div>
       </div>

@@ -144,7 +144,7 @@ router.post("/create-checkout-session", async (req, res) => {
 
       product_data: {
         name: service,
-        description: `You purchase ${service} service for ${finalprice} USD and your social media link is ${link}`, // Description of the product (optional)
+        description: `You purchase ${service} service for ${finalprice} EUR and your social media link is ${link}`, // Description of the product (optional)
       },
       unit_amount: finalprice * 100,
     },
@@ -309,7 +309,7 @@ router.post("/api/createorderinapi", async (req, res) => {
     
     res.json({
       ordercreated: ordercreated,
-      message: "Order created successfully", 
+      message: "Order created successfully. Please wait for 2 to 5 days to get your results", 
     });
   } catch (error) {
     console.error("Error fetching services:", error.message);

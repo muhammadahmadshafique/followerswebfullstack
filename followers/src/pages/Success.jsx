@@ -86,13 +86,14 @@ function Success() {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span class="sr-only">Success</span>
+              <span class="sr-only">Succès</span>
             </div>
             <p class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
-              Successfully Payment and your order has been placed.
+            Paiement réussi et votre commande a été passée.
+
             </p>
             <button className="text-[#fff] mt-[34px] text-[16px] font-[500] py-[12px] px-[18px] rounded-[8px] bg-green-500">
-              Please wait we are redirecting you
+            Veuillez patienter, nous vous redirigeons
             </button>
           </div>
         </div>

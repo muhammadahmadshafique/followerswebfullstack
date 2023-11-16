@@ -7,7 +7,7 @@ export default function ProfileCard1() {
     <div className="flex gap-y-8 flex-col md:flex-row justify-center md:justify-between items-center pt-[25px]">
       <div>
         <Link to="/">
-          <img src="/Logo.svg" alt="" srcset="" />
+          <img src="/Logo.png" alt="" srcset="" />
         </Link>
       </div>
       <div className="n1 gap-x-[20px]">

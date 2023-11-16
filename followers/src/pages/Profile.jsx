@@ -157,7 +157,7 @@ const storage = getStorage();
       <div className="max-w-[860px] mt-[60px] mx-auto profilecard ">
         <div className="flex flex-col items-center justify-center">
           <p className="text-[#1B1633] tracking-[1px] mt-[32px] mb-[80px] text-center w-full font-fcr text-[28px] font-[700]">
-            My Profile
+          Mon profil
           </p>
           <div className="flex flex-wrap gap-y-12 justify-between items-center w-full">
             <div className="flex justify-center items-center gap-x-9">
@@ -171,10 +171,10 @@ const storage = getStorage();
               </div>
               <div className="flex flex-col  gap-y-1">
                 <p className="text-[#1B1633] tracking-[1px] w-full font-fcr text-[18px] font-[700]">
-                  Upload New Profile Photo
+                Mettez à jour votre photo
                 </p>
                 <p className="text-[#1B1633] tracking-[1px] w-full font-fcl text-[12px]">
-                  Photo Fromat: jpeg , Png
+                Photo au format jpeg, png
                 </p>
               </div>
             </div>
@@ -182,7 +182,7 @@ const storage = getStorage();
             <label className="flex items-center gap-y-8 flex-col" for="actual-btn">
               <div className="n1 bg-[#94959B] cursor-pointer rounded-[12px] gap-x-2 p-[12px]">
                 <img src="/logout.svg" alt="" srcset="" />
-                <p className="text-white tracking-[1px]">Upload Photo</p>
+                <p className="text-white tracking-[1px]">Envoyer la photo</p>
               </div>
               
             </label></> }
@@ -199,7 +199,7 @@ const storage = getStorage();
           <div className="w-full mt-[50px]">
             <div>
               <p className="text-[#1B1633] py-[12px] fcl text-[18px] tracking-[1px]">
-                Name
+              Nom
               </p>
               <input
                 type="text"
@@ -229,7 +229,7 @@ const storage = getStorage();
             </div>
             <div>
               <p className="text-[#1B1633] py-[12px] tracking-[1px] fcl text-[18px]">
-                Password
+              Mot de passe
               </p>
               <Link to="/changepasswordprofile">
                 <input
@@ -244,12 +244,12 @@ const storage = getStorage();
           <div className="flex flex-col-reverse md:flex-row  gap-y-5 w-full justify-between pt-[40px] items-center">
           <Link to="/">
             <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
-              Cancel
+            Retour
             </button>
             </Link>
          
               <button onClick={(e) => changeusername(e)} className="navbutton22 whitespace-nowrap h-fit text-white font-fcl  text-[18px]">
-              {loading ? <Spinner /> : "Save Changes"}
+              {loading ? <Spinner /> : "Enregistrez les modifications"}
               </button>
           </div>
         </div>
@@ -260,7 +260,7 @@ const storage = getStorage();
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
         <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-          All rights reserved @followerstudio.com
+        Tout droit réservé ©Followerstudio
         </p>
       </div>
     </div>

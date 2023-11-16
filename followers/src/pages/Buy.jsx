@@ -33,7 +33,7 @@ function Buy() {
             class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
           />
           <p className="text-[#1B1633] text-center pb-[40px] font-fcl text-[14px] font-[300]">
-            All rights reserved @followerstudio.com
+            All rights reserved @followerstudio.fr
           </p>
         </div>
       </div>

@@ -73,13 +73,13 @@ function ChangeProfilePassword() {
 
 
   return (
-    <div className="bgim h-screen">
+    <div className="bgim">
     <div className="md:mx-[72px] mx-[32px]">
     <div className="flex gap-y-8 flex-col md:flex-row justify-center md:justify-between items-center pt-[25px]">
           <Link to="/">
             {" "}
             <div>
-              <img src="/Logo.svg" alt="" srcset="" />
+              <img src="/Logo.png" alt="" srcset="" />
             </div>
           </Link>
           <Link to={`${process.env.REACT_APP_REAL_CLIENT_URL}/#contact`}>
@@ -91,32 +91,32 @@ function ChangeProfilePassword() {
       <div className="flex justify-end my-[65px] md:my-[115px] items-center">
         <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
           <div className="space-y-[4px]">
-            <p className="text-[#1B1633] text-center w-full font-fcr text-[28px] font-[700]">
-              Change Password
+            <p className="text-[#1B1633] py-5 text-center w-full font-fcr text-[28px] font-[700]">
+            Changer le mot de passe 
             </p>
             <div>
               <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                New password
+              Mot de passe
               </p>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Enter your New password "
+                placeholder="*****************"
                 required
               />
             </div>
-            <div>
+            <div className='py-3'>
               <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                Confirm New Password
+              Confirmez le mot de passe
               </p>
               <input
                 type="password"
                 value={newpassword}
                 onChange={(e) => setNewpassword(e.target.value)}
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="Confirm your New password"
+                placeholder="*****************"
                 required
               />
             </div>
@@ -124,7 +124,7 @@ function ChangeProfilePassword() {
             <div className="flex justify-between pt-[40px] items-center">
               <Link to='/'>
               <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
-                Cancel
+              Annuler
               </button>
               </Link>
               <button
@@ -132,7 +132,7 @@ function ChangeProfilePassword() {
                 onClick={changepassword}
                 className="navbutton22 h-fit text-white font-fcl  text-[18px]"
               >
-                {loading ? <Spinner /> : "Change password"}
+                {loading ? <Spinner /> : "Changer le mot de passe"}
               </button>
             </div>
           </div>
@@ -144,8 +144,8 @@ function ChangeProfilePassword() {
         style={{ background: "rgba(105, 120, 131, 0.16)" }}
         class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
       />
-      <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-        All rights reserved @followerstudio.com
+      <p className="text-[#1B1633] pb-6 text-center font-fcl text-[14px] font-[300]">
+      Tout droit réservé ©Followerstudio
       </p>
     </div>
   </div>

@@ -117,15 +117,15 @@ function Orderdetails() {
           <div className="flex justify-between items-center w-full">
             <p></p>
             <p className="text-[#1B1633] text-center w-full font-fcr text-[24px] font-[700]">
-              Order# 1
+            Commande N° 1
             </p>
-            <p onClick={htmlToImageConvert} className="text-[#F71C36] whitespace-nowrap cursor-pointer">Download Invoice</p>
+            <p onClick={htmlToImageConvert} className="text-[#F71C36] whitespace-nowrap cursor-pointer">Télécharger la facture</p>
           </div>
           <div ref={elementRef} className="w-full mt-[50px]">
             <div className="flex gap-x-3  items-center">
               <div className="w-full">
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Platform
+                Plateforme
                 </p>
                 <input
                   type="text"
@@ -137,7 +137,7 @@ function Orderdetails() {
               </div>
               <div className="w-full">
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Followers
+                Quantité
                 </p>
                 <input
                   type="text"
@@ -149,7 +149,7 @@ function Orderdetails() {
             </div>
             <div className="mt-[40px]">
               <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                Your account Link
+              Nom d'utilisateur
               </p>
               <input
                 type="text"
@@ -165,18 +165,18 @@ function Orderdetails() {
                 1000 x 0.05 = $50
               </p> */}
               <p className="text-[#1B1633] text-[36px] fct"> 
-                Total Amount: <span className={`${colorchange? "text-white": "amounth"}`}>€{amount}</span>{" "}
+              Montant de la commande:  <span className={`${colorchange? "text-white": "amounth"}`}>€{amount}</span>{" "}
               </p>
             </div>
           </div>
           <div className="flex w-full gap-x-4 justify-between md:pt-[40px] items-center">
             <Link to="/myorder">
               <button className="navbutton12 h-fit text-white font-fcl  md:text-[18px]">
-                Back
+              Retour
               </button>
             </Link>
             <button onClick={reorder} className="navbutton22 whitespace-nowrap h-fit text-white font-fcl  md:text-[18px]">
-              Re-order
+            Commander de nouveau
             </button>
           </div>
         </div>
@@ -187,7 +187,7 @@ function Orderdetails() {
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
         <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-          All rights reserved @followerstudio.com
+        Tout droit réservé ©Followerstudio
         </p>
       </div>
     </div>

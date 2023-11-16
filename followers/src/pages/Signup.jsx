@@ -72,7 +72,7 @@ function Signup() {
         <div className="flex gap-y-4 md:gap-y-8 flex-col md:flex-row justify-center md:justify-between items-center pt-[25px]">
           <div>
             <Link to="/">
-              <img src="/Logo.svg" alt="" srcset="" />
+              <img src="/Logo.png" alt="" srcset="" />
             </Link>
           </div>
           <div className="">
@@ -86,62 +86,62 @@ function Signup() {
           <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
             <div className="space-y-[4px]">
               <p className="text-[#1B1633] text-center w-full font-fcr text-[28px] font-[700]">
-                Sign up
+              S'inscrire
               </p>
               <div>
-                <p className="text-[#1B1633] py-[12px] fcl text-[18px]">Name</p>
+                <p className="text-[#1B1633] py-[12px] fcl text-[18px]">Nom</p>
                 <input
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter your complete name"
+                  placeholder="Entrez votre nom complet"
                   required
                 />
               </div>
               <div>
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Email
+                E-mail
                 </p>
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter your email"
+                  placeholder="Entrer votre Email"
                   required
                 />
               </div>
               <div>
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Password
+                Mot de passe
                 </p>
                 <input
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter your password"
+                  placeholder="Tapez votre mot de passe"
                   required
                 />
               </div>
               <div>
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Confirm Password
+                Confirmez le mot de passe
                 </p>
                 <input
                   type="password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Confirm your password"
+                  placeholder="Tapez votre mot de passe"
                   required
                 />
               </div>
               <div className="flex gap-x-4 justify-between pt-[40px] items-center">
                 <Link to="/">
                   <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
-                    Cancel
+                  Annuler
                   </button>
                 </Link>
                 <button
@@ -149,17 +149,17 @@ function Signup() {
                   onClick={(e) => Signup(e)}
                   className="navbutton22 h-fit text-white font-fcl  text-[18px]"
                 >
-                  {loading ? <Spinner /> : "Sign up"}
+                  {loading ? <Spinner /> : "S'inscrire"}
                 </button>
               </div>
               <div className="flex justify-center items-center w-full">
                 <p className="text-[16px] tracking-[0.32px] mt-2 text-center font-[500] fcl">
-                  Already have an account .{" "}
+                Vous avez déjà un compte.{" "}
                   <Link to="/login">
                     {" "}
-                    <span className="underline cursor-pointer">Log In</span>
+                    <span className="underline cursor-pointer">Connectez-vous</span>
                   </Link>{" "}
-                  now.{" "}
+                  maintenant.{" "}
                 </p>
               </div>
             </div>
@@ -172,7 +172,7 @@ function Signup() {
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
         <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-          All rights reserved @followerstudio.com
+        Tout droit réservé ©Followerstudio
         </p>
       </div>
     </div>

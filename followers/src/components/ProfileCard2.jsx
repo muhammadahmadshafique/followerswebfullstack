@@ -13,7 +13,7 @@ function ProfileCard2() {
     <div className="flex gap-y-8 flex-col md:flex-row justify-center md:justify-between items-center pt-[25px]">
       <div>
         <Link to="/">
-          <img src="/Logo.svg" alt="" srcset="" />
+          <img src="/Logo.png" alt="" srcset="" />
         </Link>
       </div>
       <div className="flex items-center space-x-8">
@@ -51,7 +51,7 @@ function ProfileCard2() {
                 </svg>
                 <Link to="/Profile">
                   <p className="text-[#1B1633] whitespace-nowrap text-[18px] tracking-[0.4px] font-[300] fct">
-                    My Profile
+                  Mon profil
                   </p>
                 </Link>
               </div>
@@ -80,7 +80,7 @@ function ProfileCard2() {
                 </svg>
                 <Link to="/myorder">
                   <p className="text-[#1B1633] whitespace-nowrap text-[18px] tracking-[0.4px] font-[300] fct">
-                    My Orders
+                  Mes commandes
                   </p>
                 </Link>
               </div>
@@ -102,7 +102,7 @@ function ProfileCard2() {
                 </svg>
                 <Link to="/login">
                   <p className="text-[#EA1C1C] whitespace-nowrap text-[18px] tracking-[0.4px] font-[300] fct">
-                    Logout
+                  Déconnexion
                   </p>
                 </Link>
               </div>
@@ -111,7 +111,7 @@ function ProfileCard2() {
         </div>
         <Link to='/buy'>
         <button className="navbutton2 whitespace-nowrap text-white font-fcl  text-[16px]">
-          Buy Followers
+        Nos prestations
         </button>
         </Link>
       </div>

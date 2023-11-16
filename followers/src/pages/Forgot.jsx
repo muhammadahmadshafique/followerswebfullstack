@@ -43,7 +43,7 @@ function Forgot() {
           <div className="flex gap-y-4 md:gap-y-8 flex-col md:flex-row justify-center md:justify-between items-center pt-[25px]">
             <div>
               <Link to="/">
-                <img src="/Logo.svg" alt="" srcset="" />
+                <img src="/Logo.png" alt="" srcset="" />
               </Link>
             </div>
             <div className="">
@@ -56,18 +56,18 @@ function Forgot() {
             <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
               <div className="space-y-[4px]">
                 <p className="text-[#1B1633] tracking-[0.64px] text-center w-full font-fcr text-[28px] font-[700]">
-                  Forget Password
+                Mot de passe oublié
                 </p>
                 <div className="py-[80px]">
-                  <p className="text-[#1B1633] text-center tracking-[0.4px] py-[12px] fcl text-[18px]">
-                    Enter your Email to get a rest password link.{" "}
+                  <p className="text-[#1B1633] text-justify text-center tracking-[0.4px] py-[12px] fcl text-[18px]">
+                  Entrez votre e-mail pour obtenir un lien de mot de passe restant.
                   </p>
                   <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     class="bg-gray-50 border mt-3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Enter your Email to get a rest password link. "
+                    placeholder="Entrer votre Email"
                     required
                   />
                 </div>
@@ -75,11 +75,11 @@ function Forgot() {
                 <div className="flex gap-x-4 justify-between pt-[40px] items-center">
                   <Link to='/'>
                   <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
-                    Cancel
+                  Annuler
                   </button>
                   </Link>
                   <button disabled={loading} onClick={(e)=>forgot(e)} className="navbutton22 h-fit text-white font-fcl  text-[18px]">
-                    {loading ? <Spinner /> : "Send Email"}
+                    {loading ? <Spinner /> : "Envoyer"}
                   </button>
                 </div>
               </div>
@@ -92,7 +92,7 @@ function Forgot() {
             class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
           />
           <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-            All rights reserved @followerstudio.com
+          Tout droit réservé ©Followerstudio
           </p>
         </div>
       </div>

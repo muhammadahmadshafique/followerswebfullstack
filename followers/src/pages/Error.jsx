@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Error() {
-    useEffect(() => {
-        toast.error("Error in payment process. Try again", {
-          position: toast.POSITION.TOP_CENTER,
-        });
-      }, []);
+  useEffect(() => {
+    toast.error("Error in payment process. Try again", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  }, []);
   return (
     <div>
       <div
@@ -33,15 +33,17 @@ function Error() {
                 />
               </svg>
 
-              <span class="sr-only">Error in payment process. Try again</span>
+              <span class="sr-only">
+                Erreur dans le processus de paiement. Essayer à nouveau
+              </span>
             </div>
             <p class="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
-              Error in payment process. Try again
+              Erreur dans le processus de paiement. Essayer à nouveau
             </p>
-            <Link to='/'>
-            <button className="text-[#fff] bg-[#F04F36] mt-[34px] text-[16px] font-[500] py-[12px] px-[18px] rounded-[8px] ">
-              GO BACK. Try again
-            </button>
+            <Link to="/">
+              <button className="text-[#fff] bg-[#F04F36] mt-[34px] text-[16px] font-[500] py-[12px] px-[18px] rounded-[8px] ">
+                RETOURNER. Essayer à nouveau
+              </button>
             </Link>
           </div>
         </div>

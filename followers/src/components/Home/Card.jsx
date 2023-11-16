@@ -2,7 +2,7 @@ import React from "react";
 
 function Card({ img, t1, bg }) {
   return (
-    <div className={`relative ${bg === true ? "mll ml-[100px]" : ""}`}>
+    <div className={`relative ${bg === true ? "mll ml-[100px]" : ""} md:w-[466px]`}>
       {/* Outer wrapper with background color and opacity */}
       <div
         className={`${
@@ -16,7 +16,7 @@ function Card({ img, t1, bg }) {
         <img src={img} alt="" srcSet="" />
 
         {/* Your text */}
-        <p className="text-[#1B1633]">{t1}</p>
+        <p className="text-[#1B1633] text-justify">{t1}</p>
       </div>
     </div>
   );

@@ -662,14 +662,14 @@ useEffect(() => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex justify-between items-center w-full">
             <p className="text-[#1B1633] tracking-[1px] text-center w-full font-fcr text-[24px] font-[700]">
-              Buy Followers
+            Votre prestation sur mesure
             </p>
           </div>
           <div className="w-full space-y-5 mt-[50px]">
             <div className="">
               <div className="w-full">
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Service Type
+                Votre service
                 </p>
                 <select
                   onChange={(e) => setafterselection(e.target.value)}
@@ -683,20 +683,20 @@ useEffect(() => {
             </div>
             <div className="">
               <p className="text-[#1B1633] tracking-[1px] py-[12px] fcl text-[18px]">
-                Your account Link
+              Votre nom d'utilisateur (PAS LE LIEN)
               </p>
               <input
                 type="text"
                 value={link}
                 onChange={(e)=>setLink(e.target.value)}
-                placeholder="https://www.instagram.com/user1234"
+                placeholder="NOM D'UTILISATEUR"
                 class="bg-gray-50 cursor-pointer border border-gray-300 text-[#D30E49] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
               />
             </div>
             <div className="w-full">
               <p className="text-[#1B1633] tracking-[1px] py-[12px] fcl text-[18px]">
-                Quantity
+              Quantité
               </p>
               <select
                 onChange={(e) => setfinalprice(JSON.parse(e.target.value))}
@@ -713,7 +713,7 @@ useEffect(() => {
                 1000 x 0.05 = $50
               </p> */}
               <p className="text-[#1B1633] tracking-[1px] text-[36px] fct">
-                Total Amount:{" "}
+              Montant de votre commande:{" "}
                 <span className="amounth">
                 €{finalprice?.price}
                 </span>{" "}
@@ -723,11 +723,11 @@ useEffect(() => {
           <div className="flex flex-col md:flex-row gap-y-4 w-full justify-between pt-[40px] items-center">
             <Link to="/Buyfollowers">
               <button className="navbutton12 h-fit text-white font-fcl text-[18px]">
-                Cancel
+              Retourt
               </button>
             </Link>
               <button onClick={(e)=>payment(e)} className="navbutton22 whitespace-nowrap h-fit text-white font-fcl  text-[18px]">
-                {loading ? <Spinner/> : "Proceed to Payment"}
+                {loading ? <Spinner/> : "Paiement"}
               </button>
           </div>
         </div>
@@ -738,7 +738,7 @@ useEffect(() => {
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
         <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-          All rights reserved @followerstudio.com
+        Tout droit réservé ©Followerstudio
         </p>
       </div>
     </div>

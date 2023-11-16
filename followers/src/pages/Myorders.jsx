@@ -103,16 +103,16 @@ const reorder =async (item) => {
               <thead className="bg-[#E6E6E6]">
                 <tr className="py-[12px]">
                   <th className="text-start whitespace-nowrap py-[16px] pl-7 text-[#1B1633] fcl text-[18px]">
-                    Sr #
+                  N°
                   </th>
                   <th className="text-start whitespace-nowrap pl-6 py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]">
-                    Date & Time{" "}
+                  Date & Heure
                   </th>
                   <th className="text-center py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]">
-                    Platform
+                  Plateforme
                   </th>
                   <th className="text-center py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]">
-                    Amount
+                  Amount
                   </th>
                   <th className="text-start py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]"></th>
                   <th className="text-start py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]">
@@ -123,7 +123,7 @@ const reorder =async (item) => {
                       id=""
                     >
                        <option className="opacity-60 text-[12px]" value="all">
-                        All
+                       Tout voir
                       </option>
                       <option className="opacity-60 text-[12px]" value="7days">
                         Last 7 Days
@@ -160,14 +160,14 @@ const reorder =async (item) => {
                     <td className="w-[244px] ">
                       <Link to={`/orderdetails/${item._id}`}>
                         <p className="ml-1 tracking-[1px] textre cursor-pointer w-fit border border-r-0 border-l-0 border-t-0 border-b-red-500">
-                          View Details
+                        Voir le détail
                         </p>
                       </Link>
                     </td>
                     <td className="w-[170px]">
                       <button disabled={loading} onClick={()=>{
                         reorder(item)
-                      }} className="fcl reorder">{loading?<Spinner/>:"Re order"}</button>
+                      }} className="fcl reorder">{loading?<Spinner/>:"Commander de nouveau"}</button>
                     </td>
                   </tr>
                 ))}
@@ -182,7 +182,7 @@ const reorder =async (item) => {
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
         <p className="text-[#1B1633] text-center pb-[104px] font-fcl text-[14px] font-[300]">
-          All rights reserved @followerstudio.com
+        Tout droit réservé ©Followerstudio
         </p>
       </div>
     </div>
