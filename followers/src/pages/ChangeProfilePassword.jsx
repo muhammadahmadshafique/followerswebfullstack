@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import Footer from '../components/Footer';
 
 function ChangeProfilePassword() {
     const [password, setPassword] = useState(null);
@@ -144,9 +145,7 @@ function ChangeProfilePassword() {
         style={{ background: "rgba(105, 120, 131, 0.16)" }}
         class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
       />
-      <p className="text-[#1B1633] pb-6 text-center font-fcl text-[14px] font-[300]">
-      Tout droit réservé ©Followerstudio
-      </p>
+      <Footer/>
     </div>
   </div>
   )

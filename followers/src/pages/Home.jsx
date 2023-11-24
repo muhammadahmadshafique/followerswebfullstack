@@ -6,6 +6,7 @@ import Profile from "../components/Profile.jsx";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useLocation } from "react-router-dom";
+import Footer from "../components/Footer";
 
 function Home() {
   const [userexists, setUserexists] = useState(false);
@@ -143,7 +144,7 @@ function Home() {
                 forte et dynamique en ligne. C'est ici que Followerstudio entre
                 en jeu, votre véritable game-changer ! Notre plateforme
                 innovante est conçue pour booster votre présence sur divers
-                réseaux sociaux tels que Instagram, Twitter, LinkedIn, TikTok,
+                réseaux sociaux tels que Instagram, X, LinkedIn, TikTok,
                 Facebook et même Spotify.
               </p>
             </div>
@@ -187,21 +188,17 @@ function Home() {
           <div className=" space-y-[24px]">
             <Card
               img="/girl.svg"
-              t1="Today i need to have extra time after work to analyze all comapnys reports again.I`m tired."
+              t1="“Followerstudio a transformé ma présence en ligne ! L'achat d'abonnés Instagram a donné un coup de pouce instantané à mon profil..”"
               bg={false}
             />
             <Card
               img="/boy1.svg"
-              t1="Oh! shoot ! listen, try Reflectowl,
-              I`m sure that you`ll forget about
-              this problam at all."
+              t1="“Service rapide et fiable : mes abonnés Twitter sont arrivés en un rien de temps, et la qualité est au rendez-vous. Followerstudio tient ses promesses !”"
               bg={true}
             />
             <Card
               img="/boy2.svg"
-              t1="OMG ! thanks why i have try. I`m
-              sure that you`ll forget about this
-              problam at all."
+              t1="“Grâce à Followerstudio, j'ai pu augmenter significativement le nombre de mes abonnés sur plusieurs plateformes, ce qui a grandement amélioré ma visibilité en ligne.”"
               bg={false}
             />
           </div>
@@ -212,8 +209,8 @@ function Home() {
           <p className="text-[#1B1633] tracking-[1px] font-fcr text-[54px] font-[700]">
           Une <br /> question ?
           </p>
-          <p className="text-[#1B1633] text-justify tracking-[1px] font-fct opacity-80 text-[18px] font-[300] mt-[32px] mb-[40px]">
-          Notre support est à votre disposition pour <br /> répondre à vos questions ou pour le suivi de <br /> vos commandes
+          <p className="text-black text-justify font-bold text-[18px] mt-[32px] mb-[40px]">
+          Notre support est à votre disposition pour répondre à vos questions ou pour le suivi de vos commandes
           </p>
         </div>
         <div className="md:w-[50%] relative">
@@ -226,7 +223,7 @@ function Home() {
 
           <div
             id="contact"
-            className="absolute last w-[472px] h-[574px] rounded-[24px] p-[32px] right-[38px] -top-[272px] bg-[#FFF]"
+            className="absolute last w-[472px] h-[620px] md:h-[580px] rounded-[24px] p-[32px] right-[38px] -top-[272px]  bg-[#FFF]"
           >
             <form
               onSubmit={(e) => handleSubmit(e)}
@@ -278,9 +275,7 @@ function Home() {
         style={{ background: "rgba(105, 120, 131, 0.16)" }}
         class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
       />
-      <p className="text-[#1B1633] text-center pb-[40px] font-fcl text-[14px] font-[300]">
-      Tout droit réservé ©Followerstudio
-      </p>
+     <Footer/>
     </div>
   );
 }

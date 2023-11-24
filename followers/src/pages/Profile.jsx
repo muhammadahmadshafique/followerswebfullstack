@@ -25,6 +25,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Spinner from "../components/Spinner.jsx";
 import axios from "axios";
+import Footer from "../components/Footer.jsx";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCt2aeRvKXY_18x9ZbGR9tD6evVKc5ZoEs",
@@ -259,9 +260,7 @@ const storage = getStorage();
           style={{ background: "rgba(105, 120, 131, 0.16)" }}
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
-        <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-        Tout droit réservé ©Followerstudio
-        </p>
+       <Footer/>
       </div>
     </div>
   );

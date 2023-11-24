@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Spinner from "../components/Spinner";
 import axios from "axios";
+import Footer from "../components/Footer";
 function Buyfollowers2() {
   // const [selectedplateform,setselectedplateform]=useState("instagram")
   const [options, setOptions] = useState(null);
@@ -47,12 +48,12 @@ function Buyfollowers2() {
 
     if (data === "twitter") {
       setOptions([
-        "Twitter followers",
-        "Twitter followers crypto",
-        "Twitter retweet",
-        "Twitter Like",
-        "Twitter View",
-        "Twitter view video",
+        "X followers",
+        "X followers crypto",
+        "X retweet",
+        "X Like",
+        "X View",
+        "X view video",
       ]);
     }
 
@@ -328,7 +329,7 @@ function Buyfollowers2() {
       { quantity: 500, price: 130 },
       { quantity: 1000, price: 180 },
     ],
-    "Twitter followers": [
+    "X followers": [
       { quantity: 100, price: 7 },
       { quantity: 500, price: 30 },
       { quantity: 1000, price: 50 },
@@ -343,7 +344,7 @@ function Buyfollowers2() {
       { quantity: 100000, price: 500 },
     ],
 
-    "Twitter followers crypto": [
+    "X followers crypto": [
       { quantity: 1000, price: 180 },
       { quantity: 2000, price: 360 },
       { quantity: 3000, price: 540 },
@@ -351,7 +352,7 @@ function Buyfollowers2() {
       { quantity: 5000, price: 900 },
     ],
 
-    "Twitter retweet": [
+    "X retweet": [
       { quantity: 10, price: 1 },
       { quantity: 50, price: 5 },
       { quantity: 100, price: 10 },
@@ -368,7 +369,7 @@ function Buyfollowers2() {
       { quantity: 40000, price: 300 },
     ],
 
-    "Twitter Like": [
+    "X Like": [
       { quantity: 10, price: 1 },
       { quantity: 50, price: 5 },
       { quantity: 100, price: 6 },
@@ -380,7 +381,7 @@ function Buyfollowers2() {
       { quantity: 10000, price: 120 },
     ],
 
-    "Twitter View": [
+    "X View": [
       { quantity: 50, price: 1 },
       { quantity: 1000, price: 5 },
       { quantity: 10000, price: 30 },
@@ -391,7 +392,7 @@ function Buyfollowers2() {
       { quantity: 1000000, price: 90 },
     ],
 
-    "Twitter view video": [
+    "X view video": [
       { quantity: 50, price: 1 },
       { quantity: 1000, price: 5 },
       { quantity: 10000, price: 30 },
@@ -467,7 +468,7 @@ function Buyfollowers2() {
     if (
       finalprice == null || link===null||afterselection===null
     ) {
-      toast.error("Please fill all the fields", {
+      toast.error("Veuillez remplir tous les champs", {
         position: toast.POSITION.TOP_CENTER,
       });
       setLoading(false);
@@ -557,27 +558,27 @@ useEffect(() => {
     setserviceNumber(3362)
     return
   }
-  if (afterselection==="Twitter followers"){
+  if (afterselection==="X followers"){
     setserviceNumber(6082)
     return
   }
-  if (afterselection==="Twitter followers crypto"){
+  if (afterselection==="X followers crypto"){
     setserviceNumber(6075)
     return
   }
-  if (afterselection==="Twitter retweet"){
+  if (afterselection==="X retweet"){
     setserviceNumber(8411)
     return
   }
-  if (afterselection==="Twitter Like"){
+  if (afterselection==="X Like"){
     setserviceNumber(7342)
     return
   }
-  if (afterselection==="Twitter View"){
+  if (afterselection==="X View"){
     setserviceNumber(8594)
     return
   }
-  if (afterselection==="Twitter view video"){
+  if (afterselection==="X view video"){
     setserviceNumber(5954)
     return
   }
@@ -723,7 +724,7 @@ useEffect(() => {
           <div className="flex flex-col md:flex-row gap-y-4 w-full justify-between pt-[40px] items-center">
             <Link to="/Buyfollowers">
               <button className="navbutton12 h-fit text-white font-fcl text-[18px]">
-              Retourt
+              Retour
               </button>
             </Link>
               <button onClick={(e)=>payment(e)} className="navbutton22 whitespace-nowrap h-fit text-white font-fcl  text-[18px]">
@@ -737,9 +738,7 @@ useEffect(() => {
           style={{ background: "rgba(105, 120, 131, 0.16)" }}
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
-        <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-        Tout droit réservé ©Followerstudio
-        </p>
+        <Footer/>
       </div>
     </div>
   );

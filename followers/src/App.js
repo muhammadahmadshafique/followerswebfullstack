@@ -15,6 +15,8 @@ import Error from "./pages/Error";
 import Success from "./pages/Success";
 import ChangeProfilePassword from "./pages/ChangeProfilePassword";
 import Test from "./pages/Test";
+import Condition from "./pages/Condition";
+import Policies from "./pages/Policies";
 
 export default function App() {
   return (
@@ -75,6 +77,9 @@ export default function App() {
           }
         />
         <Route path="/Buyfollowers2" element={<Buyfollowers2 />} />
+        <Route path="/conditions" element={<Condition />} />
+
+        <Route path="/policies" element={<Policies />} />
 
 
         <Route path="/error" element={<Error/>} />

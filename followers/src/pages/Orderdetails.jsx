@@ -5,10 +5,14 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { toPng } from 'html-to-image';
+import jsPDF from 'jspdf';
+
+import 'jspdf-autotable';
+import Footer from "../components/Footer";
 
 function Orderdetails() {
   //get id params from url
-  const elementRef = useRef(null);
+  // const elementRef = useRef(null);
 
   const { id } = useParams();
 
@@ -99,13 +103,86 @@ function Orderdetails() {
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
         const link = document.createElement("a");
-        link.download = "my-image-name.png";
+        link.download = "my-image-name.pdf";
         link.href = dataUrl;
         link.click();
       })
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const elementRef = useRef(null);
+
+ 
+  const generatePDF = () => {
+    const pdf = new jsPDF();
+
+    // Example dynamic data
+    const plateforme = plateform;
+    const quantite = followers;
+    const amount1 = `${amount}`;
+    const taxRate = '0%';
+    const discount = '$0';
+    const total = `${amount}`;
+
+    // Logo image (replace with your logo URL or import the image)
+
+    // Set up table data using dynamic values
+    const tableData = [
+      ['Plateforme', 'Quantité', 'Nom d\'utilisateur', 'Montant de la commande'],
+      [plateforme, quantite, link, amount1],
+    ];
+
+    // Set up additional information
+    const additionalInfo = [
+      ['TAX RATE', taxRate],
+      ['DISCOUNT', discount],
+      ['TOTAL', total],
+    ];
+
+    // Set up table styles
+    const tableStyles = {
+      startY: 20,
+      theme: 'striped',
+    };
+
+    // Set up logo position
+    const logoX = 150; // X-coordinate of the logo
+    const logoY = 80; // Y-coordinate of the logo
+
+    // Generate the table
+    pdf.autoTable({
+      head: tableData.slice(0, 1),
+      body: tableData.slice(1),
+      styles: tableStyles,
+    });
+
+    // Add additional information
+    pdf.autoTable({
+      head: [['', '']],
+      body: additionalInfo,
+      startY: pdf.previousAutoTable.finalY + 10,
+      styles: tableStyles,
+    });
+
+
+
+    const logoURL = '/Logo.png'; // assuming Logo.png is in the public directory
+
+    // Add logo
+    pdf.addImage(logoURL, 'PNG', logoX, logoY, 30, 30);
+    // Adjust the size and position as needed
+
+    
+    // pdf.addImage(logoURL, 'PNG', logoX, logoY, 40, 40); // Adjust the size and position as needed
+
+    // Add contact information
+    pdf.text('Contact Information:', 15, pdf.previousAutoTable.finalY + 15);
+    pdf.text(`Email: contact@followerstudio.fr `, 15, pdf.previousAutoTable.finalY + 25);
+    pdf.text(`Phone: 0 9 70 70 70 68`, 15, pdf.previousAutoTable.finalY + 35);
+    // Save the PDF
+    pdf.save('invoice.pdf');
   };
   return (
     <div className="bg-[#F7F7F7]">
@@ -119,9 +196,9 @@ function Orderdetails() {
             <p className="text-[#1B1633] text-center w-full font-fcr text-[24px] font-[700]">
             Commande N° 1
             </p>
-            <p onClick={htmlToImageConvert} className="text-[#F71C36] whitespace-nowrap cursor-pointer">Télécharger la facture</p>
+            <p onClick={generatePDF} className="text-[#F71C36] whitespace-nowrap cursor-pointer">Télécharger la facture</p>
           </div>
-          <div ref={elementRef} className="w-full mt-[50px]">
+          <div ref={elementRef} id="yourDivId" className="w-full mt-[50px]">
             <div className="flex gap-x-3  items-center">
               <div className="w-full">
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
@@ -186,9 +263,7 @@ function Orderdetails() {
           style={{ background: "rgba(105, 120, 131, 0.16)" }}
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
-        <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-        Tout droit réservé ©Followerstudio
-        </p>
+      <Footer/>
       </div>
     </div>
   );

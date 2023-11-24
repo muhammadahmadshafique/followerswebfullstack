@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
+import Footer from "../components/Footer";
 
 function Signup() {
   const navigate = useNavigate();
@@ -82,7 +83,7 @@ function Signup() {
             </Link>
           </div>
         </div>
-        <div className="flex justify-end  md:my-[5px] items-center">
+        <div className="flex justify-center  md:my-[5px] items-center">
           <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
             <div className="space-y-[4px]">
               <p className="text-[#1B1633] text-center w-full font-fcr text-[28px] font-[700]">
@@ -171,9 +172,7 @@ function Signup() {
           style={{ background: "rgba(105, 120, 131, 0.16)" }}
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
         />
-        <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-        Tout droit réservé ©Followerstudio
-        </p>
+      <Footer/>
       </div>
     </div>
   );

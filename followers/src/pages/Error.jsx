@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function Error() {
   useEffect(() => {
-    toast.error("Error in payment process. Try again", {
+    toast.error("Erreur dans le processus de paiement. Essayer à nouveau", {
       position: toast.POSITION.TOP_CENTER,
     });
   }, []);
