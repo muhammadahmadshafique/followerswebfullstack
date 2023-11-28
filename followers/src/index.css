@@ -37,29 +37,8 @@ html {
 .navbutton {
   padding: 16px 24px;
   border-radius: 12px;
-  background: var(
-    --insta,
-    linear-gradient(
-      45deg,
-      #d6b43d 0%,
-      #dba93f 5.1%,
-      #e88a45 14.3%,
-      #eb8246 16.4%,
-      #e7774d 21.1%,
-      #dd5860 29.4%,
-      #db5164 31%,
-      #d2466c 46.4%,
-      #c93b73 56.7%,
-      #cb3179 60.7%,
-      #a23394 73.3%,
-      #7f35ab 85.6%,
-      #7d35ab 91%,
-      #7537aa 94%,
-      #673aa9 96.4%,
-      #533da8 98.5%,
-      #4041a6 100%
-    )
-  );
+  background: linear-gradient(270deg, #F7931D 1.27%, #B8529E 46.59%, #5F4E9E 100%);
+
 }
 .navbutton:hover,.navbutton2:hover,.navbutton22:hover,.navbutton1:hover,.navbutton12:hover {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(45deg, #D6B43D 0%, #DBA93F 5.10%, #E88A45 14.30%, #EB8246 16.40%, #E7774D 21.10%, #DD5860 29.40%, #DB5164 31.00%, #D2466C 46.40%, #C93B73 56.70%, #CB3179 60.70%, #A23394 73.30%, #7F35AB 85.60%, #7D35AB 91.00%, #7537AA 94.00%, #673AA9 96.40%, #533DA8 98.50%, #4041A6 100%);
@@ -69,29 +48,8 @@ html {
 .navbutton2 {
   padding: 16px 44px;
   border-radius: 12px;
-  background: var(
-    --insta,
-    linear-gradient(
-      45deg,
-      #d6b43d 0%,
-      #dba93f 5.1%,
-      #e88a45 14.3%,
-      #eb8246 16.4%,
-      #e7774d 21.1%,
-      #dd5860 29.4%,
-      #db5164 31%,
-      #d2466c 46.4%,
-      #c93b73 56.7%,
-      #cb3179 60.7%,
-      #a23394 73.3%,
-      #7f35ab 85.6%,
-      #7d35ab 91%,
-      #7537aa 94%,
-      #673aa9 96.4%,
-      #533da8 98.5%,
-      #4041a6 100%
-    )
-  );
+  background: linear-gradient(270deg, #F7931D 1.27%, #B8529E 46.59%, #5F4E9E 100%);
+
 }
 
 button{
