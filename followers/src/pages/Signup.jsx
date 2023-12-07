@@ -22,7 +22,7 @@ function Signup() {
     e.preventDefault();
     setLoading(true);
     if (password != confirmPassword) {
-      toast.error("Password does not match", {
+      toast.error("Le mot de passe ne correspond pas", {
         position: toast.POSITION.TOP_CENTER,
       });
       setLoading(false);
@@ -36,7 +36,7 @@ function Signup() {
       password == null ||
       confirmPassword == null
     ) {
-      toast.error("Please fill all the fields", {
+      toast.error("Veuillez remplir tous les champs", {
         position: toast.POSITION.TOP_CENTER,
       });
       setLoading(false);

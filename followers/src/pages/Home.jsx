@@ -40,11 +40,11 @@ function Home() {
 
     // Check if any required field is empty
     if (!firstName || !message || !email) {
-      toast.error("Please fill in all required fields");
+      toast.error("Veuillez remplir tous les champs requis");
       return;
     }
 
-    const subject = "Contact with Kalmak";
+    const subject = "Contact with Followerstudio";
     const body = `
       First Name: ${firstName}
       Email: ${email}

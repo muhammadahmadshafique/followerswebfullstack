@@ -88,17 +88,17 @@ router.post("/resetpassword", async (req, res) => {
     activationToken
   );
 
-  const activationUrl = `http://localhost:3000/changepassword/${activationToken}`;
+  const activationUrl = `https://followerstudio.fr/changepassword/${activationToken}`;
 
   try {
     await sendMail({
       email: user.email,
-      subject: "Reset Your password by clicking on the link below",
-      message: `Hello ${user.name}, please click on the link to activate your account: ${activationUrl}`,
+      subject: "Réinitialisez votre mot de passe en cliquant sur le lien ci-dessous",
+      message: `Bonjour ${user.name}, veuillez cliquer sur le lien pour activer votre compte : ${activationUrl}`,
     });
     res.status(201).json({
       success: true,
-      message: `please check your email:- ${user.email} to activate your account!`,
+      message: `Merci de consulter vos emails:- ${user.email} Pour activer votre compte!`,
     });
   } catch (error) {
     return res.status(500).json({ message: error });
@@ -125,7 +125,7 @@ router.post("/verifyToken", async (req, res) => {
       new: true,
     });
     res.status(200).json({
-      message: "Password updated successfully",
+      message: "Mot de passe mis à jour avec succès",
       updateuser: user,
     });
   } catch (error) {
@@ -255,7 +255,7 @@ router.post("/changeprofilepassword", async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, 10);
     user.password = hashedPassword;
     await user.save();
-    res.status(200).json({ message: "Password updated successfully" });
+    res.status(200).json({ message: "Mot de passe mis à jour avec succès" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: error.message });
@@ -309,7 +309,7 @@ router.post("/api/createorderinapi", async (req, res) => {
     
     res.json({
       ordercreated: ordercreated,
-      message: "Order created successfully. Please wait for 2 to 5 days to get your results", 
+      message: "Commande créée avec succès. Veuillez attendre 2 à 5 jours pour obtenir vos résultats", 
     });
   } catch (error) {
     console.error("Error fetching services:", error.message);
@@ -331,7 +331,7 @@ router.post("/editusername", async (req, res) => {
       { new: true }
     )
    
-    res.status(200).json({ message: "Username updated successfully",user:user });
+    res.status(200).json({ message: "Nom d'utilisateur mis à jour avec succès",user:user });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: error.message });

@@ -14,7 +14,7 @@ function Forgot() {
     e.preventDefault();
     setLoading(true);
     if (email == null) {
-      toast.error("Email is required to send email", {
+      toast.error("L'e-mail est requis pour envoyer un e-mail", {
         position: toast.POSITION.TOP_CENTER,
       });
       setLoading(false);

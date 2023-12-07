@@ -18,7 +18,7 @@ function Login() {
     e.preventDefault();
     setLoading(true);
     if (password == null || email == null) {
-      toast.error("All fields are required", {
+      toast.error("Tous les champs sont requis", {
         position: toast.POSITION.TOP_CENTER,
       });
       setLoading(false);
@@ -96,7 +96,7 @@ function Login() {
               </div>
               <div className="flex gap-x-4 justify-between pt-[40px] items-center">
                 <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
-                Annuler
+                Se connecter
                 </button>
                 <button
                   disabled={loading}

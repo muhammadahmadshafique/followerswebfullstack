@@ -6,12 +6,12 @@ const sendMail = async (options) => {
         port: 465,
         secure: true,
         auth:{
-            user: 'muhammadahmadrcs@gmail.com',
-            pass: 'lgjlntamfebjdkbz',
+            user: 'noreply@followerstudio.fr',
+            pass: 'Paris75**',
         },
     });
     const mailOptions = {
-        from: 'muhammadahmadrcs@gmail.com',
+        from: 'noreply@followerstudio.fr',
         to: options.email,
         subject: options.subject,
         text: options.message,

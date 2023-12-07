@@ -113,7 +113,7 @@ const storage = getStorage();
   const handleimageUpload = async (event) => {
     const selectedFile = event.target.files[0];
     if (!selectedFile) {
-      toast.error("Select your image", {
+      toast.error("Sélectionnez votre image", {
         position: toast.POSITION.TOP_CENTER,
       });
       return;
@@ -221,7 +221,7 @@ const storage = getStorage();
                 value={email}
                 onClick={()=>{
                   //show message that you can not edit email
-                  toast.error("You can not edit email", {
+                  toast.error("Vous ne pouvez pas modifier l'e-mail", {
                     position: toast.POSITION.TOP_CENTER,
                   });
                 }}

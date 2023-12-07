@@ -34,14 +34,14 @@ function ChangeProfilePassword() {
         e.preventDefault();
         setLoading(true);
         if (password == null || newpassword == null) {
-            toast.error("All fields are required", {
+            toast.error("Tous les champs sont requis", {
                 position: toast.POSITION.TOP_CENTER,
             });
             setLoading(false);
             return;
         }
         if (password != newpassword) {
-            toast.error("Password does not match", {
+            toast.error("Le mot de passe ne correspond pas", {
                 position: toast.POSITION.TOP_CENTER,
             });
             setLoading(false);
