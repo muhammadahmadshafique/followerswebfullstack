@@ -89,7 +89,7 @@ router.post("/resetpassword", async (req, res) => {
   );
 
   const activationUrl = `https://followerstudio.fr/changepassword/${activationToken}`;
-
+  
   try {
     await sendMail({
       email: user.email,

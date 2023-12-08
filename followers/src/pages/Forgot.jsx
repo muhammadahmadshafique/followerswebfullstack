@@ -28,7 +28,7 @@ function Forgot() {
         }
       );
       toast.success(response.data.message, {
-        position: toast.POSITION.TOP_CENTER,
+        position: toast.POSITION.TOP_CENTER, 
       });
       setLoading(false);
     } catch (error) {
