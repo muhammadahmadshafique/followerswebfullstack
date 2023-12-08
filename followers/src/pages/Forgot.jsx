@@ -53,7 +53,7 @@ function Forgot() {
               </Link>
             </div>
           </div>
-          <div className="flex justify-center my-[65px] md:my-[115px] items-center">
+          <div className="flex justify-center md:justify-end my-[65px] md:my-[115px] items-center">
             <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
               <div className="space-y-[4px]">
                 <p className="text-[#1B1633] tracking-[0.64px] text-center w-full font-fcr text-[28px] font-[700]">
@@ -87,11 +87,11 @@ function Forgot() {
             </div>
           </div>
         </div>
-        <div className="mt-[12px] py-12 md:mt-[12px]">
-          <hr
+        <div className="">
+          {/* <hr
             style={{ background: "rgba(105, 120, 131, 0.16)" }}
             class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
-          />
+          /> */}
           <Footer/>
         </div>
       </div>

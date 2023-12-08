@@ -68,7 +68,7 @@ function Signup() {
   };
 
   return (
-    <div className="bgim pb-12">
+    <div className="bgim ">
       <div className="md:mx-[72px] mx-[12px]">
         <div className="flex gap-y-4 md:gap-y-8 flex-col md:flex-row justify-center md:justify-between items-center pt-[25px]">
           <div>
@@ -83,7 +83,7 @@ function Signup() {
             </Link>
           </div>
         </div>
-        <div className="flex justify-center  md:my-[5px] items-center">
+        <div className="flex justify-center md:justify-end  md:my-[5px] items-center">
           <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
             <div className="space-y-[4px]">
               <p className="text-[#1B1633] text-center w-full font-fcr text-[28px] font-[700]">
@@ -168,10 +168,10 @@ function Signup() {
         </div>
       </div>
       <div className="mt-[12px] md:mt-[12px]">
-        <hr
+        {/* <hr
           style={{ background: "rgba(105, 120, 131, 0.16)" }}
           class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
-        />
+        /> */}
       <Footer/>
       </div>
     </div>
