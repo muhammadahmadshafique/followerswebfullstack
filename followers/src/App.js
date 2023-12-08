@@ -17,6 +17,7 @@ import ChangeProfilePassword from "./pages/ChangeProfilePassword";
 import Test from "./pages/Test";
 import Condition from "./pages/Condition";
 import Policies from "./pages/Policies";
+import Ahmad1 from "./pages/Ahmad1";
 
 export default function App() {
   return (
@@ -51,6 +52,7 @@ export default function App() {
         />
         <Route path="/changepassword/:activation_token" element={<Change />} />
         <Route path="/changepasswordprofile" element={<ChangeProfilePassword />} />
+        <Route path="/ahmad/:activation_token" element={<Ahmad1 />} />
 
         <Route
           path="/profile"
