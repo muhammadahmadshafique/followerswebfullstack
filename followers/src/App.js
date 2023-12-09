@@ -17,10 +17,7 @@ import ChangeProfilePassword from "./pages/ChangeProfilePassword";
 import Test from "./pages/Test";
 import Condition from "./pages/Condition";
 import Policies from "./pages/Policies";
-import Ahmad1 from "./pages/Ahmad1";
-import Ahmad from "./pages/Ahmad";
-import One from "./pages/One";
-import Two from "./pages/Two";
+
 
 export default function App() {
   return (
@@ -55,7 +52,6 @@ export default function App() {
         />
         <Route path="/changepassword/:activation_token" element={<Change />} />
         <Route path="/changepasswordprofile" element={<ChangeProfilePassword />} />
-        <Route path="/ahmad/:activation_token" element={<Ahmad1 />} />
 
         <Route
           path="/profile"
@@ -89,15 +85,6 @@ export default function App() {
 
         <Route path="/error" element={<Error/>} />
         <Route path="/test" element={<Test/>} />
-        <Route path="/ahmad" element={<Ahmad/>} />
-
-        <Route path="/one" element={<One/>} />
-        <Route path="/two/:id" element={<Two/>} />
-
-
-
-
-
         <Route path="/success" element={<Success />} />
 
       </Routes>

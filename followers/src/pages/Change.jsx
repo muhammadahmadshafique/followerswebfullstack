@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
+import Footer from "../components/Footer";
 
 function Change() {
   const { activation_token } = useParams();
@@ -70,7 +71,7 @@ function Change() {
           </div>
           </Link>
         </div>
-        <div className="flex justify-end my-[65px] md:my-[115px] items-center">
+        <div className="flex justify-center md:justify-end my-[65px] md:my-[115px] items-center">
           <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
             <div className="space-y-[4px]">
               <p className="text-[#1B1633] text-center w-full font-fcr text-[28px] font-[700]">
@@ -103,7 +104,7 @@ function Change() {
                 />
               </div>
 
-              <div className="flex justify-between pt-[40px] items-center">
+              <div className="flex flex-wrap gap-y-4 justify-center md:justify-between pt-[40px] items-center">
                 <Link to="/">
                   <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
                     Cancel
@@ -114,22 +115,14 @@ function Change() {
                   onClick={changepassword}
                   className="navbutton22 h-fit text-white font-fcl  text-[18px]"
                 >
-                  {loading ? <Spinner /> : "Change password"}
+                  {loading ? <Spinner /> : "Changer le mot de passe"}
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="">
-        <hr
-          style={{ background: "rgba(105, 120, 131, 0.16)" }}
-          class="mx-[72px] h-px my-8  border-0 dark:bg-gray-700"
-        />
-        <p className="text-[#1B1633] text-center font-fcl text-[14px] font-[300]">
-          All rights reserved @followerstudio.fr
-        </p>
-      </div>
+      <Footer/>
     </div>
   );
 }
