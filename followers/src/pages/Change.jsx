@@ -86,7 +86,7 @@ function Change() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter your Email to get a rest password link. "
+                  placeholder="Entrez votre nouveau mot de passe "
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ function Change() {
                   value={newpassword}
                   onChange={(e) => setNewpassword(e.target.value)}
                   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Enter your Email to get a rest password link. "
+                  placeholder="Confirmez votre nouveau mot de passe"
                   required
                 />
               </div>
@@ -107,7 +107,7 @@ function Change() {
               <div className="flex flex-wrap gap-y-4 justify-center md:justify-between pt-[40px] items-center">
                 <Link to="/">
                   <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
-                    Cancel
+                  Annuler
                   </button>
                 </Link>
                 <button
