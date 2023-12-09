@@ -18,6 +18,7 @@ import Test from "./pages/Test";
 import Condition from "./pages/Condition";
 import Policies from "./pages/Policies";
 import Ahmad1 from "./pages/Ahmad1";
+import Ahmad from "./pages/Ahmad";
 
 export default function App() {
   return (
@@ -86,6 +87,8 @@ export default function App() {
 
         <Route path="/error" element={<Error/>} />
         <Route path="/test" element={<Test/>} />
+        <Route path="/ahmad" element={<Ahmad/>} />
+
 
 
         <Route path="/success" element={<Success />} />
