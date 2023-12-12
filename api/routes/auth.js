@@ -20,7 +20,7 @@ router.post("/register", async (req, res) => {
   try {
     const alreadyEmail = await User.findOne({ email: email });
     if (alreadyEmail) {
-      return res.status(400).json({ message: "Email already exists" });
+      return res.status(400).json({ message: "l'email existe déjà" });
     }
     // Hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -32,7 +32,7 @@ router.post("/register", async (req, res) => {
     });
     // Save the user to the database
     await user.save();
-    res.status(201).json({ message: "User registered successfully" });
+    res.status(201).json({ message: "Utilisateur enregistré avec succès" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: error });
@@ -48,20 +48,20 @@ router.post("/login", async (req, res) => {
 
     // Check if the user exists
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({ message: "Utilisateur non trouvé" });
     }
 
     // Compare the provided password with the hashed password
     const passwordMatch = await bcrypt.compare(password, user.password);
 
     if (passwordMatch) {
-      res.status(200).json({ message: "Login successful", userinfo: user });
+      res.status(200).json({ message: "Connexion réussie", userinfo: user });
     } else {
-      res.status(401).json({ message: "Invalid credentials" });
+      res.status(401).json({ message: "les informations d'identification invalides" });
     }
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: "An error occurred" });
+    res.status(500).json({ message: "Une erreur s'est produite" });
   }
 });
 
@@ -75,7 +75,7 @@ router.post("/resetpassword", async (req, res) => {
   const { email } = req.body;
   const user = await User.findOne({ email });
   if (!user) {
-    return res.status(400).json({ message: "User not found" });
+    return res.status(400).json({ message: "Utilisateur non trouvé" });
   }
   const finaluser = {
     email: user.email,
@@ -114,7 +114,7 @@ router.post("/verifyToken", async (req, res) => {
     const verify = jwt.verify(activation_token, "sdfsdfsdgsdgsdg");
 
     if (!verify) {
-      return res.status(400).json({ message: "Invalid token" });
+      return res.status(400).json({ message: "Jeton invalide" });
     }
 
     const email = verify.email;
@@ -144,7 +144,7 @@ router.post("/create-checkout-session", async (req, res) => {
 
       product_data: {
         name: service,
-        description: `You purchase ${service} service for ${finalprice} EUR and your social media link is ${link}`, // Description of the product (optional)
+        description: `Vous achetez ${service} service pour ${finalprice} EUR et votre lien vers les réseaux sociaux est ${link}`, // Description of the product (optional)
       },
       unit_amount: finalprice * 100,
     },
@@ -185,7 +185,7 @@ router.post("/createorder", async (req, res) => {
       currentDateTime: currentDateTime,
     });
     await order.save();
-    res.status(201).json({ message: "Order created successfully" });
+    res.status(201).json({ message: "Commande créée avec succès" });
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: error.message });
@@ -312,7 +312,7 @@ router.post("/api/createorderinapi", async (req, res) => {
       message: "Commande créée avec succès. Veuillez attendre 2 à 5 jours pour obtenir vos résultats", 
     });
   } catch (error) {
-    console.error("Error fetching services:", error.message);
+    console.error("Erreur lors de la récupération des services :", error.message);
     res.status(500).json({message: error.message}); 
   }
 });

@@ -109,7 +109,7 @@ function ProfileCard2() {
             </div>
           )}
         </div>
-        <Link to='/buy'>
+        <Link to='/Buyfollowers'>
         <button className="navbutton2 whitespace-nowrap text-white font-fcl  text-[16px]">
         Nos prestations
         </button>

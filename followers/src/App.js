@@ -18,7 +18,6 @@ import Test from "./pages/Test";
 import Condition from "./pages/Condition";
 import Policies from "./pages/Policies";
 
-
 export default function App() {
   return (
     <div className="overflow-x-hidden">
@@ -32,7 +31,14 @@ export default function App() {
             </AuthRouteGuard>
           }
         />
-        <Route path="/Buyfollowers" element={<Buyfollowers />} />
+        <Route
+          path="/Buyfollowers"
+          element={
+            <AuthRouteGuard>
+              <Buyfollowers />
+            </AuthRouteGuard>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route
           path="/signup"
@@ -51,7 +57,10 @@ export default function App() {
           }
         />
         <Route path="/changepassword/:activation_token" element={<Change />} />
-        <Route path="/changepasswordprofile" element={<ChangeProfilePassword />} />
+        <Route
+          path="/changepasswordprofile"
+          element={<ChangeProfilePassword />}
+        />
 
         <Route
           path="/profile"
@@ -82,11 +91,9 @@ export default function App() {
 
         <Route path="/policies" element={<Policies />} />
 
-
-        <Route path="/error" element={<Error/>} />
-        <Route path="/test" element={<Test/>} />
+        <Route path="/error" element={<Error />} />
+        <Route path="/test" element={<Test />} />
         <Route path="/success" element={<Success />} />
-
       </Routes>
     </div>
   );

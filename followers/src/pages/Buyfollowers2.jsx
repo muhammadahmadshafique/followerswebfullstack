@@ -503,7 +503,7 @@ function Buyfollowers2() {
 
       //redirect to new window
       window.location.href = response.data.message;
-      toast.success("Redirecting to stripe", {
+      toast.success("Redirection vers stripe", {
         position: toast.POSITION.TOP_CENTER,
       });
 

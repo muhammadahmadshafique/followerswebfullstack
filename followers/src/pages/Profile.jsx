@@ -179,7 +179,7 @@ const storage = getStorage();
                 </p>
               </div>
             </div>
-           { image===null &&<><input onChange={handleimageUpload} type="file" id="actual-btn" hidden />
+           { true &&<><input onChange={handleimageUpload} type="file" id="actual-btn" hidden />
             <label className="flex items-center gap-y-8 flex-col" for="actual-btn">
               <div className="n1 bg-[#94959B] cursor-pointer rounded-[12px] gap-x-2 p-[12px]">
                 <img src="/logout.svg" alt="" srcset="" />

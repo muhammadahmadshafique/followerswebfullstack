@@ -75,11 +75,11 @@ function Change() {
           <div className="rounded-[24px] p-[32px] w-[600px] bg-[#FFF]">
             <div className="space-y-[4px]">
               <p className="text-[#1B1633] text-center w-full font-fcr text-[28px] font-[700]">
-                Change Password
+              Changer le mot de passe
               </p>
               <div>
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Password
+                Mot de passe
                 </p>
                 <input
                   type="password"
@@ -92,7 +92,7 @@ function Change() {
               </div>
               <div>
                 <p className="text-[#1B1633] py-[12px] fcl text-[18px]">
-                  Confirm Password
+                Confirmez le mot de passe
                 </p>
                 <input
                   type="password"

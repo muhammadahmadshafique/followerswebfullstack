@@ -96,7 +96,7 @@ const reorder =async (item) => {
         className="rounded-[24px] mt-[80px] p-3 pb-5 md:mx-[102px] bg-[#FFF]"
       >
         <p className="text-[#1B1633] tracking-[1px] mt-[32px] mb-[80px] text-center w-full font-fcr text-[28px] font-[700]">
-          My Orders
+        Mes commandes
         </p>
         {orders&& orders.length > 0 ? <div className="md:mx-[32px]">
           <div class="border border-[#F6F6F6] rounded-t-[24px] overflow-x-auto">
@@ -113,7 +113,7 @@ const reorder =async (item) => {
                   Plateforme
                   </th>
                   <th className="text-center py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]">
-                  Amount
+                  Montante
                   </th>
                   <th className="text-start py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]"></th>
                   <th className="text-start py-[16px] text-[#1B1633] fcl opacity-80 text-[18px]">
@@ -127,13 +127,13 @@ const reorder =async (item) => {
                        Tout voir
                       </option>
                       <option className="opacity-60 text-[12px]" value="7days">
-                        Last 7 Days
+                      Les 7 derniers jours
                       </option>
                       <option className="opacity-60 text-[12px]" value="15days">
-                        Last 15 Days
+                      15 derniers jours
                       </option>
                       <option className="opacity-60 text-[12px]" value="30days">
-                        Last 30 Days
+                      Les 30 derniers jours
                       </option>
                     </select>
                   </th>
@@ -175,7 +175,7 @@ const reorder =async (item) => {
               </tbody>
             </table>
           </div>
-        </div>: <p className="text-center text-[#1B1633] font-fcl text-[18px]">No order placed yet</p>}
+        </div>: <p className="text-center text-[#1B1633] font-fcl text-[18px]">Aucune commande passée pour l'instant</p>}
       </div>
       <div className="mt-[12px] md:pt-[112px]">
         <hr

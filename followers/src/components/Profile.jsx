@@ -49,7 +49,7 @@ function Profile() {
             </svg>
             <Link to="/Profile">
               <p className="text-[#1B1633] whitespace-nowrap text-[18px] tracking-[0.4px] font-[300] fct">
-                My Profile
+              Mon profil
               </p>
             </Link>
           </div>
@@ -78,7 +78,7 @@ function Profile() {
             </svg>
             <Link to="/myorder">
               <p className="text-[#1B1633] whitespace-nowrap text-[18px] tracking-[0.4px] font-[300] fct">
-                My Orders
+              Mes commandes
               </p>
             </Link>
           </div>
@@ -99,7 +99,7 @@ function Profile() {
               />
             </svg>
               <p className="text-[#EA1C1C] whitespace-nowrap text-[18px] tracking-[0.4px] font-[300] fct">
-                Logout
+              Se déconnecter
               </p>
           </div>
         </div>
