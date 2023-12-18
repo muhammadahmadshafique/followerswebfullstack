@@ -178,29 +178,7 @@ button{
 .ask {
   border-radius: 32px;
   opacity: 0.8;
-  background: var(
-    --insta,
-    linear-gradient(
-      45deg,
-      #d6b43d 0%,
-      #dba93f 5.1%,
-      #e88a45 14.3%,
-      #eb8246 16.4%,
-      #e7774d 21.1%,
-      #dd5860 29.4%,
-      #db5164 31%,
-      #d2466c 46.4%,
-      #c93b73 56.7%,
-      #cb3179 60.7%,
-      #a23394 73.3%,
-      #7f35ab 85.6%,
-      #7d35ab 91%,
-      #7537aa 94%,
-      #673aa9 96.4%,
-      #533da8 98.5%,
-      #4041a6 100%
-    )
-  );
+  background: var(--as, linear-gradient(90deg, #5F4D9E -17.98%, #BF539F 60.03%, #F7931E 117.9%));
 }
 
 .followers {

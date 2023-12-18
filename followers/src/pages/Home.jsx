@@ -206,10 +206,10 @@ function Home() {
       </div>
       <div className="md:mx-[72px] colvise h-[650px] relative flex items-center justify-between  ask">
         <div className="md:w-[50%] md:pl-[56px] px-6">
-          <p className="text-[#1B1633] tracking-[1px] font-fcr text-[54px] font-[700]">
+          <p className="text-white tracking-[1px] font-fcr text-[54px] font-[700]">
           Une <br /> question ?
           </p>
-          <p className="text-black text-justify font-bold text-[18px] mt-[32px] mb-[40px]">
+          <p className="text-white text-justify font-bold text-[18px] mt-[32px] mb-[40px]">
           Notre support est à votre disposition pour répondre à vos questions ou pour le suivi de vos commandes
           </p>
         </div>
