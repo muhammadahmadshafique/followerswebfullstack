@@ -77,7 +77,7 @@ function Buyfollowers() {
               ))}
             </div>
             <div className="flex gap-x-3 justify-between items-center">
-              <Link to="/buy">
+              <Link to="/">
                 <button className="navbutton1 text-white font-fcl  md:text-[18px]">
                 Retour
                 </button>

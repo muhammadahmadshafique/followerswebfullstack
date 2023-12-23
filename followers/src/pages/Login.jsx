@@ -96,14 +96,14 @@ function Login() {
               </div>
               <div className="flex gap-x-4 justify-between pt-[40px] items-center">
                 <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
-                Se connecter
+                Annuler
                 </button>
                 <button
                   disabled={loading}
                   onClick={(e) => login(e)}
                   className="navbutton22 h-fit text-white font-fcl  text-[18px]"
                 >
-                  {loading ? <Spinner /> : "Annuler"}
+                  {loading ? <Spinner /> : "Se connecter "}
                 </button>
               </div>
               <div className="flex flex-col items-center md:items-start gap-y-3 md:flex-row  md:space-x-12 justify-between selection:items-center">
