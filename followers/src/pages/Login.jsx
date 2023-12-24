@@ -95,9 +95,11 @@ function Login() {
                 />
               </div>
               <div className="flex gap-x-4 justify-between pt-[40px] items-center">
+              <Link to="/">
                 <button className="navbutton12 h-fit text-white font-fcl  text-[18px]">
                 Annuler
                 </button>
+                </Link>{" "}
                 <button
                   disabled={loading}
                   onClick={(e) => login(e)}
